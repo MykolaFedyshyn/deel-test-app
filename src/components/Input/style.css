@@ -1,0 +1,26 @@
+.input-container {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    position: relative;
+}
+
+input#username {
+    width: -webkit-fill-available;
+    padding: .5em;
+    font-size: medium;
+    padding-left: 2em;
+}
+
+.content-right {
+    position: absolute;
+    right: -.5em;
+    bottom: -.5em;
+}
+
+.content-left {
+    position: absolute;
+    left: -.5em;
+    bottom: -.5em;
+}
