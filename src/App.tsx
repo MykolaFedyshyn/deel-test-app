@@ -1,10 +1,10 @@
 import "./App.css";
-import UsersAutocomplete from "./components/UsersAutocomplete";
+import AutoComplete from "./components/Autocomplete";
 
 function App() {
   return (
     <div className="App">
-        <UsersAutocomplete />
+      <AutoComplete />
     </div>
   );
 }
