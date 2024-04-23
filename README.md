@@ -18,3 +18,6 @@ You will also see any lint errors in the console.
 ### Demo
 
 [screen-capture.webm](https://github.com/MykolaFedyshyn/deel-test-app/assets/8102160/07c49a43-0a9c-4433-9ee3-5edfe3f8221c)
+
+### Part 2 
+Part two could be found [here](./questions.md).
