@@ -9,23 +9,15 @@ import "./style.css";
 import ResultItem from "../ResultItem";
 
 interface IAutocompleteProps {
-  name: string;
   debounceValue?: number;
   apiDelayValue?: number;
   placeholder?: string;
-  onRenderResults?: (
-    inputValue: string,
-    user: IUser,
-    onItemSelect: (user: IUser) => void
-  ) => React.ReactNode;
 }
 
 function AutoComplete({
-  name,
   debounceValue = 300,
   apiDelayValue = 300,
-  placeholder = "Type to search...",
-  onRenderResults
+  placeholder = "Type to search..."
 }: IAutocompleteProps) {
   const [inputValue, setInputValue] = useState<string>("");
   const [filteredOptions, setFilteredOptions] = useState<IUser[]>([]);
@@ -93,9 +85,9 @@ function AutoComplete({
   );
 
   return (
-    <div className="autocomplete">
+    <div className="autocomplete-container">
       <Input
-        name={name}
+        name="username"
         label="User Name:"
         value={inputValue}
         placeholder={placeholder}
@@ -119,11 +111,9 @@ function AutoComplete({
       />
       {filteredOptions.length > 0 && (
         <div className="results-container">
-          {filteredOptions.map((user) =>
-            onRenderResults ? (
-              onRenderResults(debouncedInputValue, user, handleOptionClick)
-            ) : (
+          {filteredOptions.map((user) =>(
               <ResultItem
+                key={user.id}
                 inputValue={debouncedInputValue}
                 resultItem={user}
                 onItemSelect={handleOptionClick}
